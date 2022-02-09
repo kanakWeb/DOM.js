@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delteType</title>
+</head>
+
+<body>
+
+    <h3 id="delete-Of">Hi how are you!</h3>
+
+    <input id="input-field" type="text" placeholder="Please type delete">
+    <button id="btn-delete" disabled>Delete</button>
+
+
+
+
+    <script>
+        document.getElementById('btn-delete').addEventListener('click', function() {
+            document.getElementById('delete-Of').style.display = 'none'
+        })
+
+
+        //focus
+        document.getElementById('input-field').addEventListener('focus', function() {
+            document.body.style.backgroundColor = 'yellow'
+        })
+
+
+        //blur
+        document.getElementById('input-field').addEventListener('blur', function() {
+            document.body.style.backgroundColor = 'white'
+        })
+
+
+        /*  //keydown
+         document.getElementById('input-field').addEventListener('keydown', function() {
+             const input = document.getElementById('input-field');
+             console.log(input.value);
+         }) */
+
+
+        /* //keypress
+        document.getElementById('input-field').addEventListener('keypress', function() {
+            const input = document.getElementById('input-field');
+            console.log(input.value);
+        }) */
+
+
+        /*  //keyup key ke tule dhore fale 
+         document.getElementById('input-field').addEventListener('keyup', function() {
+             const input = document.getElementById('input-field');
+             console.log(input.value);
+         }) */
+
+
+        //check  copy thake pest korle catch korte parbe 
+        document.getElementById('input-field').addEventListener('keyup', function(event) {
+                const btnDelete = document.getElementById('btn-delete')
+                if (event.target.value == 'delete' || event.target.value == 'Delete' || event.target.value == 'DELETE') {
+                    btnDelete.removeAttribute('disabled');
+                } else {
+                    btnDelete.setAttribute('disabled', true);
+                }
+            })
+            //change copy thake pest korle catch korte parbe
+            /*   document.getElementById('input-field').addEventListener('change', function(event) {
+                  const input = document.getElementById('input-field');
+                  console.log(input.value);
+              }) */
+    </script>
+</body>
+
+</html>

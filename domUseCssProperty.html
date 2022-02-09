@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsPactise</title>
+</head>
+
+<body>
+
+
+    <article class="blog">
+        <h3 class="heading">heading number 1</h3>
+        <p class="pera">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, temporibus, quae beatae ad ut blanditiis fugit harum corrupti eius adipisci ea, officia maxime possimus laudantium maiores cum odit repellendus labore debitis vitae! Veritatis, reprehenderit
+            distinctio! Itaque dolore ratione inventore hic neque iusto veritatis voluptas, error, at architecto ipsam odio debitis, sequi eveniet esse earum reiciendis aperiam alias ipsa minima? At impedit, explicabo cumque neque consectetur delectus
+            molestiae optio veniam quis minus, placeat est minima illum voluptas nisi repellendus ipsam quisquam.</p>
+    </article>
+    <article class="blog">
+        <h3 class="heading">heading number 2</h3>
+        <p class="pera">Perferendis voluptatem fugiat a nulla dicta harum hic laudantium, autem nesciunt deserunt iure beatae suscipit molestias aperiam non error. Ex recusandae dolorum optio ad dolorem officiis quisquam quidem enim? Ex placeat quos reprehenderit fugiat
+            obcaecati necessitatibus animi quasi numquam, sunt culpa beatae hic laborum doloremque? Accusamus beatae soluta itaque nesciunt atque, odio alias illo ratione, inventore impedit consequatur dignissimos fugiat neque iusto, id labore? Nesciunt
+            corrupti illum explicabo esse blanditiis reprehenderit nemo facere, rem assumenda sapiente ipsum eum corporis voluptatum!</p>
+    </article>
+    <article class="blog">
+        <h3 class="heading">heading number 3</h3>
+        <p class="pera">Odit est reprehenderit minima dicta officiis distinctio. Corrupti in sit soluta sequi at, illum fuga qui molestiae doloremque quae eaque, perferendis autem minus fugiat reiciendis earum excepturi magnam et recusandae, nobis fugit repudiandae vel
+            iure! Libero aperiam dicta suscipit aspernatur animi in perspiciatis repudiandae nostrum illo, tempora modi labore. Corrupti maiores, illum officia est labore vero, ipsum ipsa id quibusdam, iure quis. Autem quasi, magni dolor optio libero
+            nulla corrupti repellendus quibusdam aliquam ipsam quidem quas fugit, iste, quis eaque?</p>
+    </article>
+    <article class="blog toblog">
+        <h3 class="heading">heading number 4</h3>
+        <p class="pera">Alias aliquid temporibus, ratione pariatur, ea nemo in exercitationem, dolor odit facere veritatis aliquam quo accusamus vero deserunt est? Sequi error nemo, aperiam voluptatem quos recusandae dolorum rem, repellendus velit, ratione obcaecati
+            similique nesciunt optio repudiandae culpa? Enim, excepturi? Maiores natus magni unde corrupti eius assumenda odio doloribus quisquam aut quam ipsum officiis sequi aliquid dolor autem, earum asperiores accusantium cum accusamus, voluptatem
+            dolorum! Ipsa sit, quidem, dolorem architecto quisquam ullam aspernatur deserunt cupiditate eum excepturi accusantium ipsam, exercitationem dolor!</p>
+
+    </article>
+    <h3 class="heading">Blog list</h3>
+    <ul id="blog-Items">
+        <li>Blog1</li>
+        <li>Blog2</li>
+        <li>Blog3</li>
+        <li>Blog4</li>
+    </ul>
+    <button onclick="document.body.style.backgroundColor='red' " style="background-color: red;">last 1st
+        section</button>
+
+
+    <button onclick="makeBlue()" style="background-color: blue;">last 2nd section</button>
+
+
+    <button id="makeYellow" style="background-color:yellow">last 3rd section</button>
+
+    <button id="makeWhite" style="background-color:white">last 4th section</button>
+
+
+    <button id="makeGreen" style="background-color:Green">last 5th section</button>
+
+
+    <button id="makeBrown" style="background-color:brown">last 6th section</button>
+
+
+    <button id="makeNavy" style="background-color:navy">last 7th section</button>
+    <button id="makeGrey" style="background-color:grey">last 8th section</button>
+
+    <h3>Today is your Propose Day</h3>
+    <p id="message"></p>
+    <button onclick="maleTalk()">Male</button>
+    <button id="female">Female</button>
+
+    <br>
+    <p id="sms"></p>
+
+    <input id="input-field" type="text">
+    <button id="update">update</button>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet non quisquam eius perferendis distinctio magnam repudiandae, impedit dignissimos! Veniam, fuga, aut animi nesciunt repellendus maxime, veritatis unde eius tempora mollitia porro nemo
+        assumenda voluptate sit optio cumque asperiores magni! Itaque sunt error illum repellat iure cupiditate, mollitia ipsa inventore aspernatur aperiam eum consequatur numquam, nulla excepturi veritatis corrupti harum accusantium, dolor sit veniam.
+        Deserunt, impedit ducimus possimus commodi, necessitatibus aspernatur amet, tempore obcaecati nam libero consequatur harum ad dicta dolorum ipsa nihil! Numquam explicabo recusandae deserunt eaque perspiciatis suscipit ipsam id nostrum a, officiis
+        commodi minima soluta. Ex, et doloribus.</p>
+
+
+
+    <script>
+        //articale part
+        const Part = document.getElementsByClassName('blog');
+        for (const blog of Part) {
+            blog.style.border = '2px solid orange'
+            blog.style.borderRadius = '20px'
+            blog.style.margin = '7px'
+            blog.style.boxShadow = '2px 8px 8px 5px grey'
+            blog.style.PaddingTop = '15px'
+
+        }
+        const headingPart = document.getElementsByClassName('heading')
+        for (const heading of headingPart) {
+            heading.style.textAlign = 'center'
+            heading.style.paddingTop = '18px'
+
+        }
+        const peraPart = document.getElementsByClassName('pera')
+        for (const pera of peraPart) {
+            pera.style.textAlign = 'justify-center'
+            pera.style.padding = '20px 10px'
+
+        }
+
+        //create and add element by using JS
+        //create the element 
+        const li = document.createElement('li');
+        li.innerText = 'Blog5'
+
+        //where to /find 
+
+        const ul = document.getElementById('blog-Items');
+
+
+        // append new element
+        ul.appendChild(li)
+    </script>
+
+
+
+    <script src="event.js"></script>
+</body>
+
+</html>
