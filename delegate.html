@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event delegate</title>
+</head>
+
+<body>
+
+
+
+
+    <h3>Delgate vai list</h3>
+
+    <ul id="list-container">
+        <li class="item">hi hello </li>
+        <li class="item">Welcome all</li>
+        <li class="item">Good bye</li>
+        <li class="item">Hello Everyone</li>
+        <li class="item">Today Holiday</li>
+        <li class="item">Thank you</li>
+    </ul>
+    <button id="add-item">Add item</button>
+
+    <script>
+        /* const itemList = document.getElementsByClassName('item');
+                        for (const item of itemList) {
+                            item.addEventListener('click', function(event) {
+                                // document.getElementById('list-container').removeChild(item) //remove child 
+
+                                event.target.parentNode.removeChild(event.target)
+                                    // 2nd awya remove child 
+                            });
+                        } */
+
+        document.getElementById('add-item').addEventListener('click', function(event) {
+            const li = document.createElement('li');
+            li.innerText = 'added this'
+            li.classList.add('item')
+
+            const parentAdd = document.getElementById('list-container')
+
+            parentAdd.append(li)
+
+        });
+    </script>
+</body>
+
+</html>
