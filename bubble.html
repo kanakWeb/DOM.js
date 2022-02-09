@@ -8,23 +8,47 @@
     <title>babbule</title>
 </head>
 
-<h2>Event bubble vai</h2>
-<section>
-    <h3>bubble vai list</h3>
-
-    <ul>
-        <li>hi hello </li>
-        <li>Welcome all</li>
-        <li>Good bye</li>
-        <li>Hello Everyone</li>
-        <li>Today Holiday</li>
-        <li>Thank you</li>
-    </ul>
-</section>
-
-
 <body>
 
+    <h2>Event bubble vai</h2>
+    <section id="section-part">
+        <h3>bubble vai list</h3>
+
+        <ul id="list-container">
+            <li class="item">hi hello </li>
+            <li id="second-item">Welcome all</li>
+            <li class="item">Good bye</li>
+            <li class="item">Hello Everyone</li>
+            <li class="item">Today Holiday</li>
+            <li class="item">Thank you</li>
+        </ul>
+    </section>
+
+
+    <script>
+        document.getElementById('second-item').addEventListener('click', function(event) {
+            console.log('second1 item')
+
+            event.stopImmediatePropagation();
+
+
+        });
+        document.getElementById('second-item').addEventListener('click', function(event) {
+            console.log('second2 item')
+
+        });
+        document.getElementById('second-item').addEventListener('click', function(event) {
+            console.log('second3 item')
+
+        });
+        // ul click
+        document.getElementById('list-container').addEventListener('click', function(event) {
+            console.log('ul container item')
+        });
+        document.getElementById('section-part').addEventListener('click', function(event) {
+            console.log('section item')
+        });
+    </script>
 </body>
 
 </html>
