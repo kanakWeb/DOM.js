@@ -26,15 +26,15 @@
     <button id="add-item">Add item</button>
 
     <script>
-        /* const itemList = document.getElementsByClassName('item');
-                        for (const item of itemList) {
-                            item.addEventListener('click', function(event) {
-                                // document.getElementById('list-container').removeChild(item) //remove child 
+        // const itemList = document.getElementsByClassName('item');
+        // for (const item of itemList) {
+        //     item.addEventListener('click', function(event) {
+        //         // document.getElementById('list-container').removeChild(item) //remove child 
 
-                                event.target.parentNode.removeChild(event.target)
-                                    // 2nd awya remove child 
-                            });
-                        } */
+        //         event.target.parentNode.removeChild(event.target)
+        //             // 2nd awya remove child 
+        //     });
+        // }
 
         document.getElementById('add-item').addEventListener('click', function(event) {
             const li = document.createElement('li');
@@ -46,6 +46,10 @@
             parentAdd.append(li)
 
         });
+
+        document.getElementById('list-container').addEventListener('click', function(event) {
+            event.target.parentNode.removeChild(event.target)
+        })
     </script>
 </body>
 
