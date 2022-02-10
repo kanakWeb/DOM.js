@@ -17,6 +17,7 @@ document.getElementById('deposite-submit').addEventListener('click', function() 
     const newDepositeTotal = previousDepositeAmount + newDepositeAmount;
 
     depositeTotal.innerText = newDepositeTotal;
+
     //update account balance 
     const balenceTotal = document.getElementById('balence-total')
     const balenceTotalText = balenceTotal.innerText;
@@ -35,8 +36,10 @@ document.getElementById('deposite-submit').addEventListener('click', function() 
 // withdra
 
 document.getElementById('withdraw-submit').addEventListener('click', function() {
+    //get button click
     const withdrawInput = document.getElementById('withdraw-input');
 
+    //get input filed value
     const newWithdrawText = withdrawInput.value;
     const newWithdrawAmount = parseFloat(newWithdrawText);
 
@@ -52,7 +55,7 @@ document.getElementById('withdraw-submit').addEventListener('click', function() 
     withdrawTotal.innerText = newToalWithdraw;
 
 
-
+    //withdraw balence
     const withdrawbalenceTotal = document.getElementById('balence-total');
     const previouswithdrawBalenceText = withdrawbalenceTotal.innerText;
     const previouswithdrawBalenceTotal = parseFloat(previouswithdrawBalenceText);
